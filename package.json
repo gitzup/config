@@ -1,0 +1,25 @@
+{
+    "name": "ts-config",
+    "version": "0.0.0",
+    "license": "Apache-2.0",
+    "author": "Arik Kfir <arik@kfirs.com>",
+    "description": "TypeScript Configuration Utility",
+    "homepage": "https://github.com/gitzup/ts-config",
+    "repository": "git@github.com:gitzup/ts-config.git",
+    "bugs": {
+        "url": "https://github.com/gitzup/ts-config/issues"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "build-watch": "tsc --watch"
+    },
+    "dependencies": {
+        "slf4ts-api": "1.1.1"
+    },
+    "devDependencies": {
+        "@types/node": "10.5.2",
+        "typescript": "2.9.2"
+    }
+}

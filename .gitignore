@@ -1,0 +1,10 @@
+/.npm
+/dist
+/node_modules
+/*.env
+/.eslintcache
+/.node_repl_history
+/*.pid
+/*.seed
+/*.pid.lock
+/npm-debug.log*
