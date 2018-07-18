@@ -3,7 +3,7 @@ import { ConfigValue } from "./ConfigValue";
 import { StringConfigValue } from "./StringConfigValue";
 import { CalculatedConfigValue } from "./CalculatedConfigValue";
 
-const logger: ILoggerInstance = LoggerFactory.getLogger( "ts-config" );
+const logger: ILoggerInstance = LoggerFactory.getLogger( "config" );
 
 /**
  * Iterate over all properties in given object, and any property whose value is an instance of Configuration will have

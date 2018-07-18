@@ -1,11 +1,11 @@
-# ts-config
+# config
 
 Node.js utility for configuration.
 
 ## Installation 
 
 ```sh
-npm install @gitzup/ts-config --save
+npm install @gitzup/config --save
 ```
 
 ## Usage
@@ -13,8 +13,7 @@ npm install @gitzup/ts-config --save
 Place the following in a `app.js` file:
 
 ```javascript
-const createConfig = require( '@gitzup/ts-config' );
-const config = createConfig( {
+const config = require( '@gitzup/config' )( {
     key1: new StringConfigValue( { default: "val1" } ),
     path1: {
         key2: new IntegerConfigValue( { default: 17 } ),

@@ -1,11 +1,11 @@
 {
-    "name": "ts-config",
+    "name": "@gitzup/config",
     "version": "0.0.0",
     "license": "Apache-2.0",
     "author": "Arik Kfir <arik@kfirs.com>",
     "description": "TypeScript Configuration Utility",
-    "homepage": "https://github.com/gitzup/ts-config",
-    "repository": "git@github.com:gitzup/ts-config.git",
+    "homepage": "https://github.com/gitzup/config",
+    "repository": "git@github.com:gitzup/config.git",
     "keywords": [
         "config",
         "typescript",
@@ -13,7 +13,7 @@
         "env"
     ],
     "bugs": {
-        "url": "https://github.com/gitzup/ts-config/issues"
+        "url": "https://github.com/gitzup/config/issues"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
