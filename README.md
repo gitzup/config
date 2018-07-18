@@ -105,3 +105,9 @@ The returned configuration hash will always contain the following key/value pair
 ## Contributing
 
 Please see our [contributing](./CONTRIBUTING.md) document.
+
+#### Resources
+
+Coverage setup:
+- https://azimi.me/2016/09/30/nyc-mocha-typescript.1.html
+- https://istanbul.js.org/docs/tutorials/typescript/
