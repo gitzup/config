@@ -1,5 +1,8 @@
 # config
 
+[![Build Status](https://travis-ci.com/gitzup/config.svg?branch=master)](https://travis-ci.com/gitzup/config)
+[![codecov](https://codecov.io/gh/gitzup/config/branch/master/graph/badge.svg)](https://codecov.io/gh/gitzup/config)
+
 Node.js utility for configuration.
 
 ## Installation 
