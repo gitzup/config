@@ -27,7 +27,7 @@ export class IntegerConfigValue extends ConfigValue<number> {
 
     private _value?: number;
 
-    constructor( readonly options: IntegerConfigValueOptions ) {
+    constructor( readonly options: IntegerConfigValueOptions = {} ) {
         super();
         if( typeof this.options.min !== "undefined" && typeof this.options.max !== "undefined" && this.options.min > this.options.max ) {
             throw new Error( `min must be lower than max` );
@@ -51,10 +51,11 @@ export class IntegerConfigValue extends ConfigValue<number> {
                 this._value = this.options.default;
             }
         } else {
-            try {
-                this._value = this.validateValue( parseInt( value ) );
-            } catch( e ) {
+            const parsed = parseInt( value );
+            if( isNaN( parsed ) ) {
                 throw new Error( `invalid integer '${value}' provided for '${environmentVariableName}'` );
+            } else {
+                this._value = this.validateValue( parsed );
             }
         }
     }

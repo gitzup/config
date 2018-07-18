@@ -17,7 +17,7 @@ export class BooleanConfigValue extends ConfigValue<boolean> {
 
     private _value?: boolean;
 
-    constructor( readonly options: BooleanConfigValueOptions ) {
+    constructor( readonly options: BooleanConfigValueOptions = {} ) {
         super();
         if( typeof this.options.default !== "undefined" ) {
             this._value = this.options.default;

@@ -15,8 +15,6 @@ export interface CalculatedConfigValueOptions<T> {
  */
 export class CalculatedConfigValue<T> extends ConfigValue<T> {
 
-    private _value?: T;
-
     constructor( readonly options: CalculatedConfigValueOptions<T> ) {
         super();
     }

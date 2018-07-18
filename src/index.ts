@@ -3,19 +3,7 @@ import { ConfigValue } from "./ConfigValue";
 import { StringConfigValue } from "./StringConfigValue";
 import { CalculatedConfigValue } from "./CalculatedConfigValue";
 
-// gets the root logger (group "" and name "")
 const logger: ILoggerInstance = LoggerFactory.getLogger( "ts-config" );
-
-/**
- * Current application environment (eg. "production", "development", "prod", "dev", "prd", etc)
- * @type {string | undefined}
- */
-const nodeEnv = process.env[ "NODE_ENV" ];
-
-/**
- * Normalized environment. Will always be "development" unless actual environment is one of "production", "prod" or "prd".
- */
-const env: "production" | "development" = ( !nodeEnv || [ "production", "prod", "prd" ].indexOf( nodeEnv ) >= 0 ) ? "production" : "development";
 
 /**
  * Iterate over all properties in given object, and any property whose value is an instance of Configuration will have
@@ -36,7 +24,7 @@ const env: "production" | "development" = ( !nodeEnv || [ "production", "prod", 
  */
 function refreshConfiguration<T extends { [ key: string ]: any }>( obj: T, path: string = "" ): T {
     for( let name in obj ) {
-        if( obj.hasOwnProperty( name ) && ( path || ![ "get", "env", "prod", "dev" ].includes( name ) ) ) {
+        if( obj.hasOwnProperty( name ) && ( path || ![ "get", "print", "env", "prod", "dev" ].includes( name ) ) ) {
             const propertyPath = ( path ? path + "." : "" ) + name;
             const type: any = obj[ name ];
             if( "refresh" in type ) {
@@ -58,7 +46,7 @@ function refreshConfiguration<T extends { [ key: string ]: any }>( obj: T, path:
  */
 function printConfig<T extends { [ key: string ]: any }>( obj: T, path: string = "" ): T {
     for( let name in obj ) {
-        if( obj.hasOwnProperty( name ) ) {
+        if( ( path || name !== "print" ) && obj.hasOwnProperty( name ) ) {
             const propertyPath = ( path ? path + "." : "" ) + name;
             const type: any = obj[ name ];
             let value: any = "";
@@ -79,12 +67,13 @@ function printConfig<T extends { [ key: string ]: any }>( obj: T, path: string =
     return obj;
 }
 
-export default function( _config: any ) {
+export default function( _config: any ): any {
+    const nodeEnv = process.env[ "NODE_ENV" ];
+    const env: "production" | "development" = nodeEnv && [ "production", "prod", "prd" ].indexOf( nodeEnv ) >= 0 ? "production" : "development";
     _config[ "env" ] = new CalculatedConfigValue( { getter: () => env } );
     _config[ "prod" ] = new CalculatedConfigValue( { getter: () => env === "production" } );
     _config[ "dev" ] = new CalculatedConfigValue( { getter: () => env !== "production" } );
-    _config[ "print" ] = function() {
-        printConfig( this );
-    };
+    _config[ "print" ] = printConfig.bind( _config );
     refreshConfiguration( _config );
+    return _config;
 }

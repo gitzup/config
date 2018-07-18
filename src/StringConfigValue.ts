@@ -38,7 +38,7 @@ export class StringConfigValue extends ConfigValue<string> {
 
     private _value?: string;
 
-    constructor( readonly options: StringConfigValueOptions ) {
+    constructor( readonly options: StringConfigValueOptions = {} ) {
         super();
         if( this.options.minLength && this.options.minLength < 0 ) {
             throw new Error( `minLength must not be negative` );
