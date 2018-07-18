@@ -10,7 +10,7 @@ describe( "Enum config value", () => {
     };
 
     it( "Accepts a default value", () => {
-        expect( new EnumConfigValue<string>().value ).to.be.undefined;
+        expect( new EnumConfigValue<string>( { values: {} } ).value ).to.be.undefined;
         expect( new EnumConfigValue<string>( { values, default: "v1" } ).value ).to.equal( "v1" );
         expect( new EnumConfigValue<string>( { values } ).value ).to.be.undefined;
     } );
