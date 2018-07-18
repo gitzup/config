@@ -21,7 +21,7 @@
         "build": "tsc",
         "build-watch": "tsc --watch",
         "preversion": "npm run test",
-        "version": "npm run build && git add --all dist",
+        "version": "npm run build",
         "postversion": "git push && git push --tags",
         "test": "mocha -r ts-node/register test/**/*.spec.ts"
     },
