@@ -40,7 +40,7 @@ $ node ./app.js
 ### Running tests 
 
 ```sh
-npm run test
+$ npm run test
 ```
 
 ### Releasing
