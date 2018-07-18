@@ -6,6 +6,12 @@
     "description": "TypeScript Configuration Utility",
     "homepage": "https://github.com/gitzup/ts-config",
     "repository": "git@github.com:gitzup/ts-config.git",
+    "keywords": [
+        "config",
+        "typescript",
+        "ts",
+        "env"
+    ],
     "bugs": {
         "url": "https://github.com/gitzup/ts-config/issues"
     },
