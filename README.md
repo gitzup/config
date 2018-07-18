@@ -36,15 +36,4 @@ $ node ./app.js
 
 ## Contributing
 
-### Running tests 
-
-```sh
-$ npm run test
-```
-
-### Releasing
-
-```sh
-$ npm version <version-spec> -m "[release] %s"
-$ npm publish --access public"
-```
+Please see our [contributing](./CONTRIBUTING.md) document.

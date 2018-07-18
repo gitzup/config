@@ -24,7 +24,6 @@ If you are in charge or creating a new release, please use these commands with a
 
 ```sh
 $ npm version <version-spec> -m "[release] %s"
-$ npm publish --access public"
 ```
 
 Next, make sure you create a GitHub release for the generated tag. The release must include references to any issues it fixes.
