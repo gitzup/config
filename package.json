@@ -20,6 +20,9 @@
     "scripts": {
         "build": "tsc",
         "build-watch": "tsc --watch",
+        "preversion": "npm run test",
+        "version": "npm run build && git add --all dist",
+        "postversion": "git push && git push --tags && rm -rf build/temp",
         "test": "mocha -r ts-node/register test/**/*.spec.ts"
     },
     "dependencies": {
