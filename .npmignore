@@ -1,0 +1,15 @@
+/.npm
+/coverage
+/node_modules
+/test
+/.eslintcache
+/.node_repl_history
+/.nyc_output
+/.travis.yml
+/npm-debug.log*
+/*.env
+/*.iml
+/*.md
+/*.pid
+/*.pid.lock
+/*.seed
