@@ -23,7 +23,13 @@ $ npm run test
 If you are in charge or creating a new release, please use these commands with as little variation as possible:
 
 ```sh
-$ npm version <version-spec> -m "[release] %s"
+$ npm version <version-spec> -m "[release] %s" --unsafe-perm
 ```
 
-Next, make sure you create a GitHub release for the generated tag. The release must include references to any issues it fixes.
+Alternatively, you can simply execute the ready-made `bash` script, which does the same, as such:
+
+```sh
+$ ./release.sh <version-spec>
+```
+
+Replace the `<version-spec>` argument (in either command) with `major`, `minor`, `patch`, or a concrete release number, as per the rules of the `npm version` command. Next, make sure you create a GitHub release for the generated tag. The release must include references to any issues it fixes.
