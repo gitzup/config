@@ -67,6 +67,13 @@ function printConfig<T extends { [ key: string ]: any }>( obj: T, path: string =
     return obj;
 }
 
+export * from "./BooleanConfigValue";
+export * from "./CalculatedConfigValue";
+export * from "./ConfigValue";
+export * from "./EnumConfigValue";
+export * from "./IntegerConfigValue";
+export * from "./StringConfigValue";
+
 export default function( _config: any ): any {
     const nodeEnv = process.env[ "NODE_ENV" ];
     const env: "production" | "development" = nodeEnv && [ "production", "prod", "prd" ].indexOf( nodeEnv ) >= 0 ? "production" : "development";
