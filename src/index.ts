@@ -73,8 +73,7 @@ export * from "./ConfigValue";
 export * from "./EnumConfigValue";
 export * from "./IntegerConfigValue";
 export * from "./StringConfigValue";
-
-export default function( _config: any ): any {
+export function createConfig( _config: any ): any {
     const nodeEnv = process.env[ "NODE_ENV" ];
     const env: "production" | "development" = nodeEnv && [ "production", "prod", "prd" ].indexOf( nodeEnv ) >= 0 ? "production" : "development";
     _config[ "env" ] = new CalculatedConfigValue( { getter: () => env } );
