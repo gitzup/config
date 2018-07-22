@@ -1,7 +1,6 @@
-import createConfig from "../src/index";
+import { createConfig, StringConfigValue } from "../src";
 import { expect } from "chai";
 import "mocha";
-import { StringConfigValue } from "../src/StringConfigValue";
 
 describe( "Configuration Factory", () => {
 

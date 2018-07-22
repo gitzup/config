@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import { EnumConfigValue } from "../src/EnumConfigValue";
+import { EnumConfigValue } from "../src";
 
 describe( "Enum config value", () => {
 

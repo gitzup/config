@@ -1,4 +1,4 @@
-import { BooleanConfigValue } from "../src/BooleanConfigValue";
+import { BooleanConfigValue } from "../src";
 import { expect } from "chai";
 import "mocha";
 

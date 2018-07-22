@@ -1,4 +1,4 @@
-import { StringConfigValue } from "../src/StringConfigValue";
+import { StringConfigValue } from "../src";
 import { expect } from "chai";
 import "mocha";
 

@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import { CalculatedConfigValue } from "../src/CalculatedConfigValue";
+import { CalculatedConfigValue } from "../src";
 
 describe( "Calculated config value", () => {
 

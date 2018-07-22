@@ -1,4 +1,4 @@
-import { IntegerConfigValue } from "../src/IntegerConfigValue";
+import { IntegerConfigValue } from "../src";
 import { expect } from "chai";
 import "mocha";
 
