@@ -2,4 +2,4 @@
 
 set -ex
 
-npm version ${1} -m "[release] %s"
+npm version ${1} -m "[release] %s" --unsafe-perm
