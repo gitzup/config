@@ -1,9 +1,9 @@
 # config
 
-![npm](https://img.shields.io/npm/dt/@gitzup/config.svg)
-![npm (scoped)](https://img.shields.io/npm/v/@gitzup/config.svg)
-![npm](https://img.shields.io/npm/l/@gitzup/config.svg)
-![Codecov](https://img.shields.io/codecov/c/github/gitzup/config.svg)
+[![npm](https://img.shields.io/npm/dt/@gitzup/config.svg)](https://www.npmjs.com/package/@gitzup/config)
+[![npm (scoped)](https://img.shields.io/npm/v/@gitzup/config.svg)](https://www.npmjs.com/package/@gitzup/config)
+[![npm](https://img.shields.io/npm/l/@gitzup/config.svg)](LICENSE)
+[![Codecov](https://img.shields.io/codecov/c/github/gitzup/config.svg)](https://codecov.io/gh/gitzup/config)
 [![Build Status](https://travis-ci.com/gitzup/config.svg?branch=master)](https://travis-ci.com/gitzup/config)
 
 Node.js utility for configuration.
