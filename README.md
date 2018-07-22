@@ -1,7 +1,10 @@
 # config
 
+![npm](https://img.shields.io/npm/dt/@gitzup/config.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@gitzup/config.svg)
+![npm](https://img.shields.io/npm/l/@gitzup/config.svg)
+![Codecov](https://img.shields.io/codecov/c/github/gitzup/config.svg)
 [![Build Status](https://travis-ci.com/gitzup/config.svg?branch=master)](https://travis-ci.com/gitzup/config)
-[![codecov](https://codecov.io/gh/gitzup/config/branch/master/graph/badge.svg)](https://codecov.io/gh/gitzup/config)
 
 Node.js utility for configuration.
 
