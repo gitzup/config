@@ -1,0 +1,22 @@
+steps:
+
+- id: npm-install
+  name: gcr.io/cloud-builders/npm
+  args: ['ci']
+
+- id: npm-run-test
+  name: gcr.io/cloud-builders/npm
+  args: ['run','test']
+
+- id: npm-run-coverage
+  name: gcr.io/cloud-builders/npm
+  args: ['run','coverage']
+
+timeout: 5m
+
+tags: ['${REPO_NAME}', '${BRANCH_NAME}']
+
+artifacts:
+  objects:
+    location: 'gs://gitzup-build-artifacts/${REPO_NAME}/${COMMIT_SHA}'
+    path: ['dist']
