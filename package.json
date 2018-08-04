@@ -24,7 +24,8 @@
         "version": "npm run build",
         "postversion": "git push && git push --tags && npm publish --access public",
         "test": "nyc mocha",
-        "coverage": "nyc report --reporter=json && codecov -f coverage/*.json"
+        "coverage": "nyc report --reporter=json && codecov -f coverage/*.json",
+        "release": "npm version -m \"Release %s\" --unsafe-perm"
     },
     "nyc": {
         "include": [
