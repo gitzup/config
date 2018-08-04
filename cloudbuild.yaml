@@ -23,4 +23,4 @@ tags: ['${REPO_NAME}', '${BRANCH_NAME}']
 artifacts:
   objects:
     location: 'gs://gitzup-build-artifacts/${REPO_NAME}/${COMMIT_SHA}'
-    paths: ['dist']
+    paths: ['dist/*']
