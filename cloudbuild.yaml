@@ -1,6 +1,6 @@
 steps:
 
-- id: npm-install
+- id: npm-ci
   name: gcr.io/cloud-builders/npm:node-10.3.0
   args: ['ci']
 
@@ -11,6 +11,10 @@ steps:
 - id: npm-run-coverage
   name: gcr.io/cloud-builders/npm:node-10.3.0
   args: ['run','coverage']
+
+- id: npm-run-build
+  name: gcr.io/cloud-builders/npm:node-10.3.0
+  args: ['run','build']
 
 timeout: 5m
 
