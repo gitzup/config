@@ -5,7 +5,7 @@
 /.eslintcache
 /.node_repl_history
 /.nyc_output
-/.travis.yml
+/cloudbuild.yaml
 /npm-debug.log*
 /*.env
 /*.iml
