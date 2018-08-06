@@ -1,9 +1,6 @@
-import { ILoggerInstance, LoggerFactory } from "slf4ts-api";
 import { ConfigValue } from "./ConfigValue";
 import { StringConfigValue } from "./StringConfigValue";
 import { CalculatedConfigValue } from "./CalculatedConfigValue";
-
-const logger: ILoggerInstance = LoggerFactory.getLogger( "config" );
 
 /**
  * Iterate over all properties in given object, and any property whose value is an instance of Configuration will have
@@ -56,7 +53,7 @@ function printConfig<T extends { [ key: string ]: any }>( obj: T, path: string =
                 } else {
                     value = type.value;
                 }
-                logger.info( `  -> ${propertyPath.padEnd( 40, "." )}${value}` );
+                console.info( `  -> ${propertyPath.padEnd( 40, "." )}${value}` );
             } else if( typeof type === "object" ) {
                 printConfig( type, propertyPath );
             } else {
