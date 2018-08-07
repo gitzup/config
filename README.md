@@ -106,7 +106,7 @@ The returned configuration hash will always contain the following key/value pair
  
 - `dev` will be `true` if `env === 'development'`
  
-- `print` will be a function that pretty-prints the configuration hash to the logger (see `slf4ts` package).
+- `print` will be a function that pretty-prints the configuration hash.
 
 ## Contributing
 
